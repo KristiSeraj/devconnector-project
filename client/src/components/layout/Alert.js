@@ -5,13 +5,17 @@ const Alert = () =>  {
     const alerts = useSelector(state => state.alert);
 
     return (
-        <section className='container'>
-            {alerts.map(alert => (
-                    <div key={alert.id} className={`alert alert-${alert.alertType}`}>
-                        { alert.msg }
-                    </div>
-                ))}
-        </section>
+        <>
+            {alerts && alerts.length > 0 && (
+                <section className='container'>
+                    {alerts.map(alert => (
+                            <div key={alert.id} className={`alert alert-${alert.alertType}`}>
+                                { alert.msg }
+                            </div>
+                        ))}
+                </section>
+            )}
+        </>
     )
 }
  
