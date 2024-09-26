@@ -8,6 +8,7 @@ const app = express();
 // CORS
 app.use(cors({
     origin: process.env.BASE_URI,
+    credentials: true
 }));
 
 // Connect db
