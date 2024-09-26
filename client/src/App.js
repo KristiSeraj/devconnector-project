@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Landing from './components/layout/Landing';
 import Navbar from './components/layout/Navbar';
+import NotFound from './components/layout/NotFound';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Alert from './components/layout/Alert';
@@ -64,6 +65,7 @@ const App = () => {
               <Route path='/posts/:id' element={<PrivateRoute>
                 <Post />
               </PrivateRoute>} />
+              <Route path='*' element={<NotFound />} />
             </Routes>
           </>
         </Router>
