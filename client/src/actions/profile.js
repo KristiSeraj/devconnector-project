@@ -2,7 +2,7 @@ import axios from 'axios';
 import { ACCOUNT_DELETED, CLEAR_PROFILE, GET_PROFILE, GET_PROFILES, GET_REPOS, PROFILE_ERROR, UPDATE_PROFILE } from './types';
 import { setAlert } from './alert';
 
-const baseUrl = process.env.BASE_URI;
+const baseUrl = process.env.REACT_APP_API_URL;
 
 // Get current users profile
 export const getCurrentProfile = () => async dispatch => {

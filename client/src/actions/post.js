@@ -2,7 +2,7 @@ import axios from "axios";
 import { setAlert } from './alert';
 import { ADD_COMMENT, ADD_POST, DELETE_POST, GET_POST, GET_POSTS, POST_ERROR, REMOVE_COMMENT, UPDATE_LIKES } from "./types";
 
-const baseUrl = process.env.BASE_URI;
+const baseUrl = process.env.REACT_APP_API_URL;
 
 // Get posts
 export const getPosts = () => async dispatch => {
